@@ -2,7 +2,7 @@ import { useProduct } from "../hooks/useProduct"
 import { createContext } from "react"
 import styles from "../styles/styles.module.css"
 import { ContextValues ,ProductProps } from "../interfaces/interfaces"
-import { ProductButtons, ProductImage, ProductTitle } from "."
+
 
 
 
