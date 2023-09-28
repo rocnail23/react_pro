@@ -1,5 +1,6 @@
 import {lazy} from "react"
 import NoLazy from "../components/NoLazy"
+import ShoppingStore from '../02-components-patterns/pages/ShoppingStore';
 
 type element = () => JSX.Element
 
@@ -16,7 +17,7 @@ const primaryLayout = lazy(() => import("../lazy.01/layout/layoutRoutes"))
 
 const primaryRouter:Router[] = [
     {
-        component: NoLazy,
+        component: ShoppingStore,
         name: "noLazy",
         path: "/",
         relativePath:"/"

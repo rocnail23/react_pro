@@ -1,8 +1,8 @@
 import {Link,useLocation,Routes,Route, Navigate} from "react-router-dom"
 import About from "../../components/About"
 import Users from "../../components/Users"
-import Home from "../../components/Home"
 import {useEffect} from "react"
+import ShoppingStore from "../../02-components-patterns/pages/ShoppingStore"
 
 
 const layoutRoutes = () => {
@@ -38,7 +38,7 @@ const layoutRoutes = () => {
       <Routes>
         <Route path={`/about`} element={<About/>}/>
         <Route path={`/user`} element={<Users/>}/>
-        <Route path="/home" element={<Home/>}/>
+        <Route path="/home" element={<ShoppingStore/>}/>
         <Route path="/*" element={<Navigate to="/layout/about"/>}/>
       </Routes>
     </div>
