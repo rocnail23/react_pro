@@ -2,12 +2,16 @@ import { useContext } from "react"
 import styles from "../styles/styles.module.css"
 import { CarsContex } from "./ProductCars"
 
-export const ProductButtons = () => {
+interface  Props {
+    className?: string
+}
+
+export const ProductButtons = ({className}:Props) => {
 
     const {increaseBy,state} = useContext(CarsContex)
 
     return (
-        <div className={styles.buttonsContainer}>
+        <div className={`${styles.buttonsContainer} ${className}`}>
 
             <button className={styles.buttonMinus} onClick={() => increaseBy(-1)}>-</button>
 

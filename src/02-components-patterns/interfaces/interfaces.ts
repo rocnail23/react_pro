@@ -6,11 +6,7 @@ export interface ContextValues {
     state: number
 }
 
-export interface ProductProps  {
-    product : Product,
-    children: ReactElement | ReactElement[]
- }
- 
+
  export interface Product {
      id: number,
      title: string,
