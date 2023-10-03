@@ -12,3 +12,13 @@ export interface ContextValues {
      title: string,
      image?: string
  }
+
+ export interface OnChangeArgs {
+    product: Product,
+    count: number
+ }
+
+ export interface CartProduct extends Product {
+    count:number
+  }
+  
