@@ -1,5 +1,10 @@
 import {lazy} from "react"
 import NoLazy from "../components/NoLazy"
+import { RegisterPage } from "../formik/pages/RegisterPage"
+import { FormikPage } from "../formik/pages/FormikPage"
+import FormikYupPage from "../formik/pages/FormikYupPage"
+import FormikComponent from "../formik/pages/FormikComponent"
+import FormikAbstracted from "../formik/pages/FormikAbstracted"
 
 type element = () => JSX.Element
 
@@ -16,7 +21,7 @@ const primaryLayout = lazy(() => import("../lazy.01/layout/layoutRoutes"))
 
 const primaryRouter:Router[] = [
     {
-        component: NoLazy,
+        component: RegisterPage,
         name: "noLazy",
         path: "/",
         relativePath:"/"
@@ -24,10 +29,28 @@ const primaryRouter:Router[] = [
     },
 
     {
-        component: primaryLayout,
+        component: FormikPage,
         name: "layout",
         path: "/layout",
         relativePath: "/Layout/*"
+    },
+    {
+        component: FormikYupPage,
+        name: "yup",
+        path: "/yup",
+        relativePath: "/yup/*"
+    },
+    {
+        component: FormikComponent,
+        name: "formikComponent",
+        path: "/component",
+        relativePath: "/component/*"
+    },
+    {
+        component: FormikAbstracted,
+        name: "formikAbstrated",
+        path: "/abstracted",
+        relativePath: "/abstracted/*"
     }
    
 
